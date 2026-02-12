@@ -3,9 +3,6 @@ import Hero from "../../components/Hero";
 import AboutMeComponent from "../../components/AboutMeComponent";
 import SkillsComponent from "../../components/SkillsComponent";
 import ProyectosComponents from "../../components/ProyectosComponents";
-import ExperienceComponent from "../../components/ExperienceComponent";
-import FormationComponent from "../../components/FormationComponent";
-import CertificationComponents from "../../components/CertificationComponents";
 import ContactComponent from "../../components/ContactComponent";
 import NavBarComponent from "../../components/NavBarComponent";
 
@@ -25,13 +22,6 @@ const Home = () => {
 
       {/* PROYECTOS */}
       <ProyectosComponents />
-      {/* EXPERIENCIA */}
-      <ExperienceComponent />
-
-      {/* FORMACION */}
-      <FormationComponent />
-      {/* CERTIFICACIONES */}
-      <CertificationComponents />
 
       {/* CONTACTO */}
       <ContactComponent />
