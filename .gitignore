@@ -22,3 +22,54 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+# =========================
+# WebStorm / JetBrains IDE
+# =========================
+
+# Carpeta principal de configuración del IDE
+.idea/
+
+# Archivos de proyecto
+*.iml
+
+# Configuración específica de usuario
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
+
+# Archivos generados por el IDE
+.idea/**/contentModel.xml
+
+# Archivos relacionados con HTTP Client de JetBrains
+.idea/httpRequests/
+
+# Archivos locales
+.idea/**/dataSources/
+.idea/**/dataSources.ids
+.idea/**/dataSources.local.xml
+.idea/**/sqlDataSources.xml
+.idea/**/dynamic.xml
+.idea/**/uiDesigner.xml
+.idea/**/dbnavigator.xml
+
+# =========================
+# Logs
+# =========================
+
+
+# =========================
+# Node (por si es proyecto JS/React)
+# =========================
+node_modules/
+dist/
+build/
+coverage/
+
+# =========================
+# Sistema operativo
+# =========================
+
+Thumbs.db
+

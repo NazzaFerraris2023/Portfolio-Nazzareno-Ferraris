@@ -1,0 +1,10 @@
+@use "bootstrap/scss/bootstrap" with (
+  $primary: #101622,//Color del fondo
+  $secondary: #135BEC,//Color botones principales
+  $success: #1A2233,//Color botones secundarios
+  $warning: #FFFFFF,//Color textos principales 
+  $info: #94A3B8, // Color texto relleno
+  $dark: #E2E8F0// Color texto navbar secundario
+
+//Ver los tamaños de las letras
+);
