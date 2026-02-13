@@ -5,8 +5,8 @@ const Hero = () => {
     <>
       <section className="container ">
         <div className="row p-2" >
-          <div className="col">
-          <img className="hero-img" src="/assets/imagen_1_codigo_portfolio.png" alt="" />
+          <div className="col-6">
+          <img className="hero-img" src="/assets/code-2434271_640.jpg" alt="" />
         </div>
 
         <div className="col">
