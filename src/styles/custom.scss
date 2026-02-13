@@ -1,6 +1,5 @@
 
 
-
 $special-text: "Manrope";
 
 
@@ -15,7 +14,9 @@ $special-text: "Manrope";
 //Ver los tamaños de las letras
 
 );
-
+.contenedor-custom{
+  max-width: 40em;
+}
 .special-text{
   font-family: $special-text;
 }
@@ -34,7 +35,166 @@ $special-text: "Manrope";
 .hero-img{
   filter: brightness(0.7);
   border: none;
-  width: 40em;
+  width: 35em;
+  height: 24em;
   padding:1em;
   
+}
+
+.animation-back {
+  position: relative;
+  overflow: hidden;
+  background: #101622;
+  border-radius: 12px;
+  padding: 1em;
+  color: #fff;
+  transition: color 0.3s ease;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #2e682c; 
+    transition: bottom 0.5s ease;
+    z-index: 0;
+  }
+
+  &:hover::before {
+    bottom: 0;
+    
+  }
+
+  * {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.animation-front {
+  position: relative;
+  overflow: hidden;
+  background: #101622;
+  border-radius: 12px;
+  padding: 1em;
+  color: #fff;
+  transition: color 0.3s ease;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f8e112f1;
+    transition: bottom 0.5s ease;
+    z-index: 0;
+  }
+
+  &:hover::before {
+    bottom: 0;
+
+  }
+
+  * {
+    position: relative;
+    z-index: 1;
+  }
+}
+.animation-mobile {
+  position: relative;
+  overflow: hidden;
+  background: #101622;
+  border-radius: 12px;
+  padding: 1em;
+  color: #fff;
+  transition: color 0.3s ease;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #2c3e43;
+    transition: bottom 0.5s ease;
+    z-index: 0;
+  }
+
+  &:hover::before {
+    bottom: 0;
+
+  }
+
+  * {
+    position: relative;
+    z-index: 1;
+  }
+}
+.animation-versiones {
+  position: relative;
+  overflow: hidden;
+  background: #101622;
+  border-radius: 12px;
+  padding: 1em;
+  color: #fff;
+  transition: color 0.3s ease;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f34f29;
+    transition: bottom 0.5s ease;
+    z-index: 0;
+  }
+
+  &:hover::before {
+    bottom: 0;
+
+  }
+
+  * {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.animation-datos {
+  position: relative;
+  overflow: hidden;
+  background: #101622;
+  border-radius: 12px;
+  padding: 1em;
+  color: #fff;
+  transition: color 0.3s ease;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #2b7bd2;
+    transition: bottom 0.5s ease;
+    z-index: 0;
+  }
+
+  &:hover::before {
+    bottom: 0;
+
+  }
+
+  * {
+    position: relative;
+    z-index: 1;
+  }
 }

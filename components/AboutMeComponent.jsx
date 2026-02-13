@@ -9,7 +9,7 @@ const AboutMeComponent = () => {
         </h3>
         <p className="text-info special-text fw-semibold normal-text-size">
           Actualmente estoy estudiando la tecnicatura en Analista de Sistemas.
-          Me formé como desarrollador Frontend y actualmente busco expandir mis
+          Me formé como desarrollador Frontend y  busco expandir mis
           conocimientos, enfocándome en afianzar el backend mientras continúo
           perfeccionando mis habilidades en frontend. Además, dedico parte de mi
           tiempo al aprendizaje de tecnologías para desarrollo mobile (React

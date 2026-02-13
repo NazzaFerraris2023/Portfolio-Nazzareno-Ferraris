@@ -5,11 +5,11 @@ const Hero = () => {
     <>
       <section className="container ">
         <div className="row p-2" >
-          <div className="col-6">
+          <div className="col-6 " data-aos="fade-right" data-aos-delay="300">
           <img className="hero-img" src="/assets/code-2434271_640.jpg" alt="" />
         </div>
 
-        <div className="col">
+        <div className="col" data-aos="fade-left" data-aos-delay="300">
           <h1 className="special-text text-warning fw-bold primary-size">
           Nazzareno Dante Ferraris Sabbatini
         </h1>
