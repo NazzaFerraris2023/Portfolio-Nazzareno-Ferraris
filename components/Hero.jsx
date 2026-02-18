@@ -11,7 +11,7 @@ const Hero = () => {
 
         <div className="col" data-aos="fade-left" data-aos-delay="300">
           <h1 className="special-text text-warning fw-bold primary-size">
-          Nazzareno Dante Ferraris Sabbatini
+          Nazzareno Ferraris Sabbatini
         </h1>
 
         <h2 className="special-text text-warning secondary-title-size">

@@ -2,16 +2,10 @@ import React, { useState } from "react";
 
 const ProyectosComponents = () => {
   const [demoOrt, setDemoOrt] = useState(false);
+    const [demoWeb, setDemoWeb] = useState(false);
+  const [demoLanding, setDemoLanding] = useState(false);
 
-  const handleDemo = () => {
-    if (demoOrt === true) {
-      return (
-        <div style={{ backgroundColor: "red" }}>
-          <h3>Demo de prueba</h3>
-        </div>
-      );
-    }
-  };
+
   return (
     <>
       <section className="container">
@@ -191,13 +185,45 @@ const ProyectosComponents = () => {
               <div className="bg-secondary p-2 rounded-3 mb-3">
                 <a
                   className="text-dark text-decoration-none special-text fw-semibold"
-                  href="#"
+                  onClick={() => setDemoWeb(true)}
                 >
                   Ver demo
                 </a>
               </div>
             </div>
           </div>
+
+          {demoWeb && (
+            <div
+              className="modal fade show d-block"
+              onClick={() => setDemoWeb(false)}
+            >
+              <div
+                className="modal-dialog modal-lg"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <div className="modal-content bg-primary text-white">
+                  <div className="modal-header">
+                    <h5 className="modal-title">Pagina Web | DemoCorp</h5>
+                    <button
+                      type="button"
+                      className="btn-close btn-close-white"
+                      onClick={() => setDemoWeb(false)}
+                    />
+                  </div>
+
+                  <div className="modal-body">
+                    <video controls style={{ width: "95%", height:"90%" }}>
+                      <source
+                        src="/assets/DemoCorp webPage Demo.mov"
+                        type="video/mp4"
+                      />
+                    </video>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
           <div className="contenedor-custom" data-aos="fade-right">
             <h4 className="text-dark special-text fw-bold tertiary-title-size">
               Landing page | Cliente privado
@@ -233,13 +259,45 @@ const ProyectosComponents = () => {
             <div className="bg-secondary p-2 rounded-3 mb-3">
               <a
                 className="text-dark text-decoration-none special-text fw-semibold"
-                href="#"
+                onClick={() => setDemoLanding(true)}
               >
                 Ver demo
               </a>
             </div>
           </div>
           </div>
+
+          {demoLanding && (
+            <div
+              className="modal fade show d-block"
+              onClick={() => setDemoLanding(false)}
+            >
+              <div
+                className="modal-dialog modal-lg"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <div className="modal-content bg-primary text-white">
+                  <div className="modal-header">
+                    <h5 className="modal-title">Landing page | DemoCorp</h5>
+                    <button
+                      type="button"
+                      className="btn-close btn-close-white"
+                      onClick={() => setDemoLanding(false)}
+                    />
+                  </div>
+
+                  <div className="modal-body">
+                    <video controls style={{ width: "95%", height:"90%" }}>
+                      <source
+                        src="/assets/Demo Zoom for education.mp4"
+                        type="video/mp4"
+                      />
+                    </video>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
 
           
         </div>
