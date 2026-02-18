@@ -2,9 +2,8 @@ import React, { useState } from "react";
 
 const ProyectosComponents = () => {
   const [demoOrt, setDemoOrt] = useState(false);
-    const [demoWeb, setDemoWeb] = useState(false);
+  const [demoWeb, setDemoWeb] = useState(false);
   const [demoLanding, setDemoLanding] = useState(false);
-
 
   return (
     <>
@@ -118,7 +117,7 @@ const ProyectosComponents = () => {
                   </div>
 
                   <div className="modal-body">
-                    <video controls style={{ width: "95%", height:"90%" }}>
+                    <video controls style={{ width: "95%", height: "90%" }}>
                       <source
                         src="/assets/Demo Zoom for education.mp4"
                         type="video/mp4"
@@ -213,12 +212,13 @@ const ProyectosComponents = () => {
                   </div>
 
                   <div className="modal-body">
-                    <video controls style={{ width: "95%", height:"90%" }}>
-                      <source
-                        src="/assets/DemoCorp webPage Demo.mov"
-                        type="video/mp4"
-                      />
-                    </video>
+                    <iframe
+                      src="https://drive.google.com/file/d/18GEYx54DP8HbHhFQhLs5Vyh5Y81YC-Sb/preview"
+                      width="100%"
+                      height="480"
+                      allow="autoplay"
+                      style={{ borderRadius: "10px" }}
+                    ></iframe>
                   </div>
                 </div>
               </div>
@@ -256,15 +256,15 @@ const ProyectosComponents = () => {
             </p>
 
             <div className="d-flex ">
-            <div className="bg-secondary p-2 rounded-3 mb-3">
-              <a
-                className="text-dark text-decoration-none special-text fw-semibold"
-                onClick={() => setDemoLanding(true)}
-              >
-                Ver demo
-              </a>
+              <div className="bg-secondary p-2 rounded-3 mb-3">
+                <a
+                  className="text-dark text-decoration-none special-text fw-semibold"
+                  onClick={() => setDemoLanding(true)}
+                >
+                  Ver demo
+                </a>
+              </div>
             </div>
-          </div>
           </div>
 
           {demoLanding && (
@@ -287,7 +287,7 @@ const ProyectosComponents = () => {
                   </div>
 
                   <div className="modal-body">
-                    <video controls style={{ width: "95%", height:"90%" }}>
+                    <video controls style={{ width: "95%", height: "90%" }}>
                       <source
                         src="/assets/Demo Zoom for education.mp4"
                         type="video/mp4"
@@ -298,8 +298,6 @@ const ProyectosComponents = () => {
               </div>
             </div>
           )}
-
-          
         </div>
       </section>
     </>
