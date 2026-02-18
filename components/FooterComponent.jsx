@@ -23,7 +23,7 @@ const FooterComponent = () => {
             </div>
             <div class="col">
               <a
-                href="mailto:nazzaferrariss@gmail.com"
+                href="mailto:nazza.ferraris@hotmail.com"
                 className="text-light text-decoration-none"
               >
                 <SiGmail />

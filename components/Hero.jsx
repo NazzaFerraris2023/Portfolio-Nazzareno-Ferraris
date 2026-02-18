@@ -5,11 +5,11 @@ const Hero = () => {
     <>
       <section className="container ">
         <div className="row p-2" >
-          <div className="col-6 " data-aos="fade-right" data-aos-delay="300">
+          <div className="col-7 d-flex justify-content-center" data-aos="fade-right" data-aos-delay="300">
           <img className="hero-img" src="/assets/code-2434271_640.jpg" alt="" />
         </div>
 
-        <div className="col" data-aos="fade-left" data-aos-delay="300">
+        <div className="col " data-aos="fade-left" data-aos-delay="300">
           <h1 className="special-text text-warning fw-bold primary-size">
           Nazzareno Ferraris Sabbatini
         </h1>
@@ -26,10 +26,10 @@ const Hero = () => {
 
         <div className="d-flex ">
           <div className="bg-secondary p-2 rounded-3 me-2">
-            <a className="text-dark text-decoration-none special-text fw-semibold" href="#">Ver proyectos</a>
+            <a className="text-dark text-decoration-none special-text fw-semibold" href="#proyectos">Ver proyectos</a>
           </div>
           <div className="bg-success p-2 rounded-3 ms-2 ">
-            <a className="text-dark text-decoration-none special-text fw-semibold" href="#">Contactarme</a>
+            <a className="text-dark text-decoration-none special-text fw-semibold" href="#contacto">Contactarme</a>
           </div>
         </div>
         </div>

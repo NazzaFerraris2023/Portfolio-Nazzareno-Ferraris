@@ -8,10 +8,10 @@ import { HiOutlineCode } from "react-icons/hi";
 const SkillsComponent = () => {
   return (
     <>
-       <section className="container bg-primary">
+       <section id="stack" className="container bg-primary">
         <h4 className='special-text text-dark fw-bold text-center my-3 secondary-title-size'>Stack tecnológico</h4>
 
-        <div className='d-flex'>
+        <div className='d-flex contenedor-stack'>
           <div className='d-flex flex-column mx-auto gap-2 animation-front'>
             <h5 className='text-dark fw-bold'>Frontend <HiOutlineCode /></h5>
         <ul>

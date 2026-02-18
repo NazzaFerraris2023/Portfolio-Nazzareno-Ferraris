@@ -25,19 +25,19 @@ const NavBarComponent = () => {
                 <a
                   class="nav-link active text-dark"
                   aria-current="page"
-                  href="#"
+                  href="#proyectos"
                 >
                   Proyectos
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-dark" href="#">
+                <a class="nav-link text-dark" href="#stack">
                   Stack tecnologico
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-dark" href="#">
-                  Experiencia
+                <a class="nav-link text-dark" href="#contacto">
+                  Contacto
                 </a>
               </li>
               <li class="nav-item bg-secondary p-0 rounded-3 mx-1">

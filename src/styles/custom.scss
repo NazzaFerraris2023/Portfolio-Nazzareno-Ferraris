@@ -1,44 +1,45 @@
-
-
 $special-text: "Manrope";
 
-
 @use "bootstrap/scss/bootstrap" with (
-  $primary: #101622,//Color del fondo
-  $secondary: #135BEC,//Color botones principales
-  $success: #1A2233,//Color botones secundarios
-  $warning: #FFFFFF,//Color textos principales 
-  $info: #94A3B8, // Color texto relleno
-  $dark: #E2E8F0,// Color texto navbar secundario
+  $primary: #101622,
+  //Color del fondo
+  $secondary: #135bec,
+  //Color botones principales
+  $success: #1a2233,
+  //Color botones secundarios
+  $warning: #ffffff,
+  //Color textos principales
+  $info: #94a3b8,
+  // Color texto relleno
+  $dark: #e2e8f0,
 
-//Ver los tamaños de las letras
-
+  // Color texto navbar secundario
+  //Ver los tamaños de las letras
 );
-.contenedor-custom{
+.contenedor-custom {
   max-width: 40em;
 }
-.special-text{
+.special-text {
   font-family: $special-text;
 }
-.primary-size{
-  font-size:3.5em ;
+.primary-size {
+  font-size: 3.5em;
 }
-.secondary-title-size{
+.secondary-title-size {
   font-size: 1.8em;
 }
 .tertiary-title-size {
   font-size: 1.15em;
 }
-.normal-text-size{
+.normal-text-size {
   font-size: 1em;
 }
-.hero-img{
-  filter: brightness(0.7);
+.hero-img {
+  filter: brightness(0.6);
   border: none;
-  width: auto;
-  height: 24em;
-  padding:1em;
-  
+  width: 100%;
+  height: auto;
+  padding: 1em;
 }
 
 .animation-back {
@@ -57,14 +58,13 @@ $special-text: "Manrope";
     left: 0;
     width: 100%;
     height: 100%;
-    background: #2e682c; 
+    background: #2e682c;
     transition: bottom 0.5s ease;
     z-index: 0;
   }
 
   &:hover::before {
     bottom: 0;
-    
   }
 
   * {
@@ -96,7 +96,6 @@ $special-text: "Manrope";
 
   &:hover::before {
     bottom: 0;
-
   }
 
   * {
@@ -127,7 +126,6 @@ $special-text: "Manrope";
 
   &:hover::before {
     bottom: 0;
-
   }
 
   * {
@@ -158,7 +156,6 @@ $special-text: "Manrope";
 
   &:hover::before {
     bottom: 0;
-
   }
 
   * {
@@ -190,7 +187,6 @@ $special-text: "Manrope";
 
   &:hover::before {
     bottom: 0;
-
   }
 
   * {
@@ -198,7 +194,146 @@ $special-text: "Manrope";
     z-index: 1;
   }
 }
-.form{
+.form {
   width: 100%;
+}
+//Version Tablet
+@media (min-width: 481px) and (max-width: 991px) {
+  .hero-img {
+    display: none;
+  }
+  .contenedor-stack {
+    display: inline-block;
+    flex-direction: column;
+    .animation-front {
+      width: 100%;
+      h5 {
+        text-align: center;
+      }
+      li {
+        text-align: center;
+      }
+    }
+    .animation-back {
+      width: 100%;
+      h5 {
+        text-align: center;
+      }
+      li {
+        text-align: center;
+      }
+    }
 
+    .animation-mobile {
+      width: 100%;
+      h5 {
+        text-align: center;
+      }
+      li {
+        text-align: center;
+      }
+    }
+
+    .animation-versiones {
+      width: 100%;
+      h5 {
+        text-align: center;
+      }
+      li {
+        text-align: center;
+      }
+    }
+
+    .animation-datos {
+      width: 100%;
+      h5 {
+        text-align: center;
+      }
+      li {
+        text-align: center;
+      }
+    }
+  }
+}
+//Version mobile
+@media (max-width: 480px) {
+  .hero-img {
+    display: none;
+  }
+
+  .contenedor-stack {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .animation-front {
+    width: 50vw;
+    margin: 1em 0;
+    h5 {
+      text-align: center;
+    }
+  }
+  .animation-back {
+    width: 50vw;
+    margin: 1em 0;
+    h5 {
+      text-align: center;
+    }
+  }
+  .animation-mobile {
+    width: 50vw;
+    margin: 1em 0;
+    h5 {
+      text-align: center;
+    }
+  }
+  .animation-versiones {
+    width: 50vw;
+    margin: 1em 0;
+    h5 {
+      text-align: center;
+    }
+  }
+  .animation-datos {
+    width: 50vw;
+    margin: 1em 0;
+    h5 {
+      text-align: center;
+    }
+  }
+
+  //Proyectos component
+  .contenedor-proyectos {
+    padding: 2em;
+    h3 {
+      margin-bottom: 1em;
+    }
+  }
+  .contenedor-custom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  // Formulario
+  .formulario {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    li {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      margin-left: 2em;
+    }
+    input {
+      width: 70vw;
+    }
+    textarea {
+      width: 70vw;
+    }
+  }
+  .btn-form {
+    padding: 0;
+  }
 }

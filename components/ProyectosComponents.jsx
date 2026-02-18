@@ -7,8 +7,8 @@ const ProyectosComponents = () => {
 
   return (
     <>
-      <section className="container">
-        <h3 className="text-dark special-text fw-bold text-center secondary-title-size">
+      <section className="container contenedor-proyectos">
+        <h3 id="proyectos"className="text-dark special-text fw-bold text-center secondary-title-size">
           Proyectos
         </h3>
 
@@ -235,12 +235,12 @@ const ProyectosComponents = () => {
             </span>
 
             <ul className="mt-2">
-              <li className="text-info">Navegación por secciones</li>
-              <li className="text-info">
+              <li className="text-info list-unstyled">Navegación por secciones</li>
+              <li className="text-info list-unstyled">
                 Formulario con React Hook Form + FormSubmit
               </li>
-              <li className="text-info">Soporte multilenguaje</li>
-              <li className="text-info">SEO on-page y diseño responsive</li>
+              <li className="text-info list-unstyled">Soporte multilenguaje</li>
+              <li className="text-info list-unstyled">SEO on-page y diseño responsive</li>
             </ul>
 
             <p className="text-info">
