@@ -9,8 +9,8 @@ function App() {
   useEffect(() => {
     Aos.init({ 
       duration: 1000, 
-      disable: "mobile"
-    });
+      disable: 'mobile'
+        });
   }, []);
   
 

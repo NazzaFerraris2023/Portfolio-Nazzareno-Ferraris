@@ -85,7 +85,7 @@ const ProyectosComponents = () => {
             </ul>
 
             <div className="d-flex justify-content-start">
-              <div className="bg-secondary p-2 rounded-3 mb-3">
+              <div className="bg-secondary p-2 rounded-3 mb-3 btn">
                 <a
                   className="text-dark text-decoration-none special-text fw-semibold"
                   onClick={() => setDemoOrt(true)}
@@ -181,7 +181,7 @@ const ProyectosComponents = () => {
             </p>
 
             <div className="d-flex justify-content-end">
-              <div className="bg-secondary p-2 rounded-3 mb-3">
+              <div className="bg-secondary p-2 rounded-3 mb-3 btn">
                 <a
                   className="text-dark text-decoration-none special-text fw-semibold"
                   onClick={() => setDemoWeb(true)}
@@ -256,7 +256,7 @@ const ProyectosComponents = () => {
             </p>
 
             <div className="d-flex ">
-              <div className="bg-secondary p-2 rounded-3 mb-3">
+              <div className="bg-secondary p-2 rounded-3 mb-3 btn">
                 <a
                   className="text-dark text-decoration-none special-text fw-semibold"
                   onClick={() => setDemoLanding(true)}

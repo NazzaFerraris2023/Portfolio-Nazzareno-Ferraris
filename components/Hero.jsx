@@ -25,11 +25,11 @@ const Hero = () => {
         </h3>
 
         <div className="d-flex ">
-          <div className="bg-secondary p-2 rounded-3 me-2">
-            <a className="text-dark text-decoration-none special-text fw-semibold" href="#proyectos">Ver proyectos</a>
+          <div className="bg-secondary p-2 rounded-3 me-2 btn">
+            <a className="text-dark text-decoration-none special-text fw-semibold " href="#proyectos">Ver proyectos</a>
           </div>
-          <div className="bg-success p-2 rounded-3 ms-2 ">
-            <a className="text-dark text-decoration-none special-text fw-semibold" href="#contacto">Contactarme</a>
+          <div className="bg-success p-2 rounded-3 ms-2 btn">
+            <a className="text-dark text-decoration-none special-text fw-semibold " href="#contacto">Contactarme</a>
           </div>
         </div>
         </div>
