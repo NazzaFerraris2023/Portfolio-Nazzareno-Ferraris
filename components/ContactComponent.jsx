@@ -3,10 +3,10 @@ import React, { useRef, useState } from "react";
 const ContactComponent = () => {
   const honeyRef = useRef(null);
   const [data, setData] = useState({
-    nombre: "",
+    name: "",
     email: "",
     telefono: "",
-    mensaje: "",
+    message: "",
   });
 
   const handleChange = async(elemento) => {
@@ -19,14 +19,14 @@ const ContactComponent = () => {
     const soloLetras = /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]{2,60}$/;
     const soloNumeros = /^\+?[0-9]{8,15}$/;
 
-    if (data.nombre.length > 60) return;
+    if (data.name.length > 60) return;
     if (data.email.length > 80) return;
-    if (data.mensaje.length > 500) return;
+    if (data.message.length > 500) return;
 
-    if (data.nombre.trim() === "" || data.email.trim() === "") {
+    if (data.name.trim() === "" || data.email.trim() === "") {
       alert("El campo nombre o correo electronico es obligatorio");
       return;
-    } else if (!soloLetras.test(data.nombre)) {
+    } else if (!soloLetras.test(data.name)) {
       alert("Caracteres invalidos");
       return;
     } else if (!soloNumeros.test(data.telefono)) {
@@ -36,13 +36,13 @@ const ContactComponent = () => {
     //Preparo datos para formsubmitted
 
     const datos = {
-      nombre: data.nombre,
+      name: data.name,
       email: data.email,
       telefono: data.telefono,
-      mensaje: data.mensaje,
+      message: data.message,
       _honey: honeyRef.current?.value || "",
       _replyto: data.email,
-      _subject: "Recibiste una consulta de: " + data.nombre,
+      _subject: "Recibiste una consulta de: " + data.name,
       _captcha: true,
       _template: "table",
     };
@@ -65,10 +65,10 @@ const ContactComponent = () => {
         alert("Mensaje enviado correctamente!");
 
         setData({
-          nombre: "",
+          name: "",
           email: "",
           telefono: "",
-          mensaje: "",
+          message: "",
         });
       } else {
         alert("Algo salio mal!");
@@ -87,8 +87,6 @@ const ContactComponent = () => {
           Contacto
         </h3>
         <form
-          action="/my-handling-form-page"
-          method="post"
           className="formulario"
           onSubmit={handleSubmit}
         >
@@ -109,9 +107,9 @@ const ContactComponent = () => {
                 className="form"
                 type="text"
                 id="name"
-                name="nombre"
+                name="name"
                 placeholder="Pepe"
-                value={data.nombre}
+                value={data.name}
                 onChange={handleChange}
               />
             </li>
@@ -150,9 +148,9 @@ const ContactComponent = () => {
               <textarea
                 className="form"
                 id="msg"
-                name="mensaje"
+                name="message"
                 placeholder="Deja tu consulta aca!"
-                value={data.mensaje}
+                value={data.message}
                 onChange={handleChange}
               ></textarea>
             </li>
