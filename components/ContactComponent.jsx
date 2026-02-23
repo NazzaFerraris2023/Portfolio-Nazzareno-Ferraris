@@ -1,4 +1,5 @@
 import React, { useRef, useState } from "react";
+import Swal from "sweetalert2";
 
 const ContactComponent = () => {
   const honeyRef = useRef(null);
@@ -7,12 +8,13 @@ const ContactComponent = () => {
     email: "",
     telefono: "",
     message: "",
+    honey: "",
   });
 
-  const handleChange = async(elemento) => {
-    const {name,value} = elemento.target
-    setData((prev) => ({...prev,[name]:value}))
-  }
+  const handleChange = async (elemento) => {
+    const { name, value } = elemento.target;
+    setData((prev) => ({ ...prev, [name]: value }));
+  };
 
   const handleSubmit = async (elemento) => {
     elemento.preventDefault();
@@ -24,14 +26,37 @@ const ContactComponent = () => {
     if (data.message.length > 500) return;
 
     if (data.name.trim() === "" || data.email.trim() === "") {
-      alert("El campo nombre o correo electronico es obligatorio");
+      Swal.fire({
+        title: "Error!",
+        text: "El campo nombre o correo electronico es obligatorio",
+        icon: "error",
+        background: "#101622",
+        color: "#94a3b8",
+        confirmButtonColor:"#135bec"
+        });
       return;
     } else if (!soloLetras.test(data.name)) {
-      alert("Caracteres invalidos");
+      Swal.fire({
+        title: "Error!",
+        text: "Caracteres invalidos!",
+        icon: "error",
+        background: "#101622",
+        color: "#94a3b8",
+        confirmButtonColor:"#135bec"
+             });
       return;
-    } else if (!soloNumeros.test(data.telefono)) {
-      alert("Solo se aceptan numeros");
-      return;
+    } else if (data.telefono.trim() !== "") {
+      if (!soloNumeros.test(data.telefono)) {
+        Swal.fire({
+          title: "Error!",
+          text: "Solo se aceptan numeros!",
+          icon: "error",
+          background: "#101622",
+          color: "#94a3b8",
+          confirmButtonColor:"#135bec"
+        });
+        return;
+      }
     }
 
     const datos = {
@@ -39,24 +64,31 @@ const ContactComponent = () => {
       email: data.email,
       telefono: data.telefono,
       message: data.message,
-      
+      honey: honeyRef.current.value,
     };
 
-if (honeyRef.current.value) return;
+    if (honeyRef.current.value) return;
     try {
       const res = await fetch(
-        "http://localhost:8080/nodemailer",
+        // "http://localhost:8080/nodemailer",
         {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
           body: JSON.stringify(datos),
-});
-        
+        }
+      );
 
       if (res.ok) {
-        alert("Mensaje enviado correctamente!");
+        Swal.fire({
+          title: "Mensaje enviado!",
+          text: "Me pondre en contacto con vos lo antes posible!",
+          icon: "success",
+          background: "#101622",
+          color: "#94a3b8",
+          confirmButtonColor:"#135bec"
+        });
 
         setData({
           name: "",
@@ -65,11 +97,26 @@ if (honeyRef.current.value) return;
           message: "",
         });
       } else {
-        alert("Algo salio mal!");
-      }
+        Swal.fire({
+          title: "Error!",
+          text: "Algo salio mal!",
+          icon: "error",
+          background: "#101622",
+          color: "#94a3b8",
+          confirmButtonColor:"#135bec"
+        });      }
     } catch (error) {
-      alert("Hubo un error de conexion!", error);
-    } finally {
+      console.log(error)
+Swal.fire({
+          title: "Error!",
+          text: "Error de conexion!",
+          icon: "error",
+          background: "#101622",
+          color: "#94a3b8",
+          confirmButtonColor:"#135bec"
+        });
+      
+      } finally {
       honeyRef.current.value = "";
     }
   };
@@ -80,13 +127,10 @@ if (honeyRef.current.value) return;
         <h3 className="text-warning special-text fw-bold text-center secondary-title-size">
           Contacto
         </h3>
-        <form
-          className="formulario"
-          onSubmit={handleSubmit}
-        >
+        <form className="formulario" onSubmit={handleSubmit}>
           <input
             type="text"
-            name="_honey"
+            name="honey"
             ref={honeyRef}
             tabIndex="-1"
             autoComplete="off"

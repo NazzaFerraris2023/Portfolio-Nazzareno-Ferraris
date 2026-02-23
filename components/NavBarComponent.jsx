@@ -41,7 +41,7 @@ const NavBarComponent = () => {
                 </a>
               </li>
               <li class="nav-item bg-secondary p-0 rounded-3 mx-1">
-                <a class="nav-link text-dark text-center" href="#">
+                <a class="nav-link text-dark text-center" href="https://drive.google.com/file/d/1Txa6UnswCBrZ9oHrJw-QjDMgvq-f0X1G/view?usp=drivesdk" target="_blank">
                   <MdOutlineFileDownload /> Resume
                 </a>
               </li>

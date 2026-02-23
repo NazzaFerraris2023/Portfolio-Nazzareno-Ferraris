@@ -17,6 +17,7 @@ const FooterComponent = () => {
               <a
                 href="https://www.linkedin.com/in/nazzareno-dante-ferraris-sabbatini-3a8557269/"
                 className="text-light text-decoration-none"
+                target="_blank"
               >
                 <FaLinkedin />
               </a>
@@ -33,6 +34,7 @@ const FooterComponent = () => {
               <a
                 href="https://github.com/NazzaFerraris2023?tab=repositories"
                 className="text-light text-decoration-none"
+                target="_blank"
               >
                 <FaGithub />
               </a>
