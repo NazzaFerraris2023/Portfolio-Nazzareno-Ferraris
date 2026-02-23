@@ -287,12 +287,13 @@ const ProyectosComponents = () => {
                   </div>
 
                   <div className="modal-body">
-                    <video controls style={{ width: "95%", height: "90%" }}>
-                      <source
-                        src="/assets/Demo Zoom for education.mp4"
-                        type="video/mp4"
-                      />
-                    </video>
+                    <iframe
+                      src="https://drive.google.com/file/d/1ne41bCNnbQSN9JuCO7TVKFelqxXtaZRj/preview"
+                      width="100%"
+                      height="480"
+                      allow="autoplay"
+                      style={{ borderRadius: "10px" }}
+                    ></iframe>
                   </div>
                 </div>
               </div>

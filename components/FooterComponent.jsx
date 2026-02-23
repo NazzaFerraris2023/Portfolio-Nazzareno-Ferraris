@@ -24,7 +24,7 @@ const FooterComponent = () => {
             </div>
             <div class="col">
               <a
-                href="mailto:nazza.ferraris@hotmail.com"
+                href="mailto:nazzaferrariss@gmail.com"
                 className="text-light text-decoration-none"
               >
                 <SiGmail />
