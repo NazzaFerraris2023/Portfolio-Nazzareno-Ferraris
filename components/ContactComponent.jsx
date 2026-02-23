@@ -33,33 +33,27 @@ const ContactComponent = () => {
       alert("Solo se aceptan numeros");
       return;
     }
-    //Preparo datos para formsubmitted
 
     const datos = {
       name: data.name,
       email: data.email,
       telefono: data.telefono,
       message: data.message,
-      _honey: honeyRef.current?.value || "",
-      _replyto: data.email,
-      _subject: "Recibiste una consulta de: " + data.name,
-      _captcha: true,
-      _template: "table",
+      
     };
 
-    const formBody = new URLSearchParams(datos);
-
+if (honeyRef.current.value) return;
     try {
       const res = await fetch(
-        "https://formsubmit.co/15bd2c2f2398122de6d3a2392065f2aa",
+        "http://localhost:8080/nodemailer",
         {
           method: "POST",
           headers: {
-            "Content-Type": "application/x-www-form-urlencoded",
+            "Content-Type": "application/json",
           },
-          body: formBody,
-        }
-      );
+          body: JSON.stringify(datos),
+});
+        
 
       if (res.ok) {
         alert("Mensaje enviado correctamente!");
