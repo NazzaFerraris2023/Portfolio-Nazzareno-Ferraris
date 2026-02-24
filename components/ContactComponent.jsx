@@ -70,7 +70,7 @@ const ContactComponent = () => {
     if (honeyRef.current.value) return;
     try {
       const res = await fetch(
-        "https://portfolio-back-wqtk.onrender.com/nodemailer",
+        "https://www.nazzaferrarisdeveloper.com//nodemailer",
         {
           method: "POST",
           headers: {
