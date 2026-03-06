@@ -82,6 +82,12 @@ const ContactComponent = () => {
         }
       );
 
+      console.log("status:", res.status);
+      console.log("ok:", res.ok);
+
+      const text = await res.text();
+      console.log("respuesta:", text);
+
       if (res.ok) {
         Swal.fire({
           title: "Mensaje enviado!",
@@ -212,26 +218,6 @@ const ContactComponent = () => {
             </button>
           </div>
         </form>
-
-        {/* Modal Bootstrap
-       <div className={`modal fade ${showModal ? "show d-block" : ""}`} tabIndex="-1" style={{background: showModal ? "rgba(0,0,0,0.5)" : "none"}}>
-        <div className="modal-dialog">
-          <div className="modal-content color-modal">
-            <div className="modal-header ">
-              <h5 className="modal-title text-light">{t("form_advise")}!</h5>
-              <button type="button" className="btn-close" onClick={() => setShowModal(false)}></button>
-            </div>
-            <div className="modal-body">
-              <p className="text-light">{modalMsg}</p>
-            </div>
-            <div className="modal-footer">
-              <button type="button" className="btn btn-secondary" onClick={() => setShowModal(false)}>
-                {t("form_close_button")}
-              </button>
-            </div>
-          </div>
-        </div>
-      </div> */}
       </section>
     </>
   );
