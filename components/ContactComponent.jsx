@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import Swal from "sweetalert2";
 
 const ContactComponent = () => {
+  const [loader, setLoader] = useState(false);
   const honeyRef = useRef(null);
   const [data, setData] = useState({
     name: "",
@@ -32,8 +33,8 @@ const ContactComponent = () => {
         icon: "error",
         background: "#101622",
         color: "#94a3b8",
-        confirmButtonColor:"#135bec"
-        });
+        confirmButtonColor: "#135bec",
+      });
       return;
     } else if (!soloLetras.test(data.name)) {
       Swal.fire({
@@ -42,8 +43,8 @@ const ContactComponent = () => {
         icon: "error",
         background: "#101622",
         color: "#94a3b8",
-        confirmButtonColor:"#135bec"
-             });
+        confirmButtonColor: "#135bec",
+      });
       return;
     } else if (data.telefono.trim() !== "") {
       if (!soloNumeros.test(data.telefono)) {
@@ -53,7 +54,7 @@ const ContactComponent = () => {
           icon: "error",
           background: "#101622",
           color: "#94a3b8",
-          confirmButtonColor:"#135bec"
+          confirmButtonColor: "#135bec",
         });
         return;
       }
@@ -69,6 +70,7 @@ const ContactComponent = () => {
 
     if (honeyRef.current.value) return;
     try {
+      setLoader(true);
       const res = await fetch(
         "https://portfolio-back-wqtk.onrender.com/nodemailer",
         {
@@ -80,6 +82,12 @@ const ContactComponent = () => {
         }
       );
 
+      console.log("status:", res.status);
+      console.log("ok:", res.ok);
+
+      const text = await res.text();
+      console.log("respuesta:", text);
+
       if (res.ok) {
         Swal.fire({
           title: "Mensaje enviado!",
@@ -87,7 +95,7 @@ const ContactComponent = () => {
           icon: "success",
           background: "#101622",
           color: "#94a3b8",
-          confirmButtonColor:"#135bec"
+          confirmButtonColor: "#135bec",
         });
 
         setData({
@@ -103,21 +111,22 @@ const ContactComponent = () => {
           icon: "error",
           background: "#101622",
           color: "#94a3b8",
-          confirmButtonColor:"#135bec"
-        });      }
-    } catch (error) {
-      console.log(error)
-Swal.fire({
-          title: "Error!",
-          text: "Error de conexion!",
-          icon: "error",
-          background: "#101622",
-          color: "#94a3b8",
-          confirmButtonColor:"#135bec"
+          confirmButtonColor: "#135bec",
         });
-      
-      } finally {
+      }
+    } catch (error) {
+      console.log(error);
+      Swal.fire({
+        title: "Error!",
+        text: "Error de conexion!",
+        icon: "error",
+        background: "#101622",
+        color: "#94a3b8",
+        confirmButtonColor: "#135bec",
+      });
+    } finally {
       honeyRef.current.value = "";
+      setLoader(false);
     }
   };
 
@@ -194,31 +203,21 @@ Swal.fire({
             </li>
           </ul>
           <div className="d-flex justify-content-center ">
-            <button className="bg-secondary rounded-3 mb-3 p-2 btn-form text-dark text-decoration-none special-text fw-semibold border border-0">
-              Enviar
+            <button
+              className="bg-secondary rounded-3 mb-3 p-2 btn-form text-dark text-decoration-none special-text fw-semibold border border-0"
+              disabled={loader}
+            >
+              {loader ? (
+                <>
+                  <span className="spinner-border spinner-border-sm me-2"></span>
+                  Enviando...
+                </>
+              ) : (
+                "Enviar"
+              )}
             </button>
           </div>
         </form>
-
-        {/* Modal Bootstrap
-       <div className={`modal fade ${showModal ? "show d-block" : ""}`} tabIndex="-1" style={{background: showModal ? "rgba(0,0,0,0.5)" : "none"}}>
-        <div className="modal-dialog">
-          <div className="modal-content color-modal">
-            <div className="modal-header ">
-              <h5 className="modal-title text-light">{t("form_advise")}!</h5>
-              <button type="button" className="btn-close" onClick={() => setShowModal(false)}></button>
-            </div>
-            <div className="modal-body">
-              <p className="text-light">{modalMsg}</p>
-            </div>
-            <div className="modal-footer">
-              <button type="button" className="btn btn-secondary" onClick={() => setShowModal(false)}>
-                {t("form_close_button")}
-              </button>
-            </div>
-          </div>
-        </div>
-      </div> */}
       </section>
     </>
   );

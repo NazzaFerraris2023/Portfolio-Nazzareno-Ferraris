@@ -12,6 +12,18 @@ function App() {
       disable: 'mobile'
         });
   }, []);
+
+  useEffect(() => {
+  const wakeUpServer = async () => {
+    try {
+      await fetch("https://portfolio-back-wqtk.onrender.com");
+    } catch (error) {
+      console.log("Backend dormido, despertando...");
+    }
+  };
+
+  wakeUpServer();
+}, []);
   
 
   return (
